@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-alpha-svc
+  labels:
+    app: project-alpha
+spec:
+  type: LoadBalancer
+  selector:
+    app: project-alpha
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
